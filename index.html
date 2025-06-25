@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" id="sachin">Sachin's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li id="home"><a href="http://">Home</li></a>
+                    <li id="about"><a href="http://">About</li></a>
+                    <li id="projects"><a href="http://">Projects</li></a>
+                    <li id="contact"><a href="http://">Contact Me</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="name">Sachin</span>
+                <div>and I am a passionate </div>
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn" onclick="downloadFile()">Download Resume</button>
+                    <button class="btn" onclick="goToLink()">Go to Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.webp" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="grey">What I have done so far</span>
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-c" src="png/C.png" alt="">
+                    <div class="vertical-title">
+                        C Language
+                    </div>
+                    <div class="vertical-desc">
+                      
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-C" src="png/C++.png" alt="">
+                    <div class="vertical-title">
+                        C++ language
+                    </div>
+                    <div class="vertical-desc">
+                      
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-HTML" src="png/html.png" alt="">
+                    <div class="vertical-title">
+                        HTML 
+                    </div>
+                    <div class="vertical-desc">
+                       
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-CSS" src="png/css.png" alt="">
+                    <div class="vertical-title">
+                     CSS
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-JS" src="png/JS.png" alt="">
+                    <div class="vertical-title">
+                       JavaScript
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <footer>
+            <div class="thirdSection">
+                <div class="left-down">Sachin's Portfolio</div>
+                <div class="firstBox">
+                    <ul>
+                        <li id="home"><a href="http://">About</li></a>
+                        <li id="about"><a href="http://">Careers</li></a>
+                        <li id="projects"><a href="http://">Investor Relations</li></a>
+                        <li id="contact"><a href="http://">Legal</li></a>
+                    </ul>
+                </div>
+                <div class="secondBox">
+                    <ul>
+                        <li id="home"><a href="http://">Support</li></a>
+                        <li id="about"><a href="http://">Contact Us</li></a>
+                        <li id="projects"><a href="http://">Customer Portal</li></a>
+                        <li id="contact"><a href="http://">Atlas Status</li></a>
+                    </ul>
+                </div>
+                <div class="thirdBox">
+                    <ul>
+                        <li id="home"><a href="http://">Data Basics</li></a>
+                        <li id="about"><a href="http://">Vector Databases</li></a>
+                        <li id="projects"><a href="http://">Document Databases</li></a>
+                        <li id="contact"><a href="http://">Community Edition</li></a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['CSE S.E. Student', 'Web Developer in making.'],
+            typeSpeed: 50,
+        });
+
+        function downloadFile() {
+            const a = document.createElement("a");
+            a.href = "Resume Updated .pdf"; // file located in the root folder
+            a.download = "Resume Updated .pdf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        const websiteUrl = "https://github.com/sjha04180";
+        function goToLink() {
+            window.location.href = websiteUrl; // or use window.open(websiteUrl, '_blank'); to open in a new tab
+        }
+    </script>
+</body>
+
+</html>
